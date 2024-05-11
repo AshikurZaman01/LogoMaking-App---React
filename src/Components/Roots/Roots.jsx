@@ -7,7 +7,7 @@ const Roots = () => {
         <div>
             <Header></Header>
 
-            <div className='flex w-[98%] mx-auto '>
+            <div className='flex mx-auto '>
 
                 <div className='w-64'>
                     <SideNav></SideNav>
