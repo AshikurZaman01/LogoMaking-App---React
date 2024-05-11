@@ -12,13 +12,13 @@ const SideNav = () => {
         <div className="border h-[100vh]">
             <div>
                 {menuList.map((menu) => (
-                    <div key={menu.id} className="flex items-center gap-2 w-full hover:bg-primary hover:text-white hover:rounded-md transition-all duration-200 ease-in-out">
+                    <div key={menu.id} className="group flex items-center gap-2 w-full hover:bg-primary hover:text-white hover:rounded-md transition-all duration-200 ease-in-out hover:cursor-pointer">
 
                         <div className="ml-5">
                             {menu.icon}
                         </div>
 
-                        <h2 className="p-3 text-lg px-7 text-gray-700 my-2 cursor-pointer hover:text-white">{menu.name}</h2>
+                        <h2 className="p-3 text-lg px-7 text-gray-700 my-2  group-hover:text-white">{menu.name}</h2>
                     </div>
                 ))}
             </div>
