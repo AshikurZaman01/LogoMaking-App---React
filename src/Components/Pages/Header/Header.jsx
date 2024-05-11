@@ -2,7 +2,7 @@ import { Download, DownloadCloud, DownloadCloudIcon } from "lucide-react";
 
 const Header = () => {
     return (
-        <div className="container mx-auto my-2 border-b pb-2">
+        <div className="container mx-auto mt-2 border-b pb-2">
 
             <div className="flex justify-between">
                 <div>
