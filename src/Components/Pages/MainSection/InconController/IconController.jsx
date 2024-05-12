@@ -1,5 +1,6 @@
 import { Mouse } from "lucide-react";
 import { useState } from "react";
+import ColorPickerController from "../ColorPickerController/ColorPickerController";
 
 
 const IconController = () => {
@@ -38,6 +39,14 @@ const IconController = () => {
 
                 <div id="mouse" className="p-3 cursor-pointer bg-gray-200  rounded-md  h-[50px] flex items-center my-1 ">
                     <input onChange={handleRotate} value={rotate} type="range" min={0} max={360} className="w-[80%]" />
+                </div>
+            </div>
+
+            <div className="my-4">
+                <label className="text-xl font-bold">Colop Picker</label>
+
+                <div className="">
+                    <ColorPickerController />
                 </div>
             </div>
 
