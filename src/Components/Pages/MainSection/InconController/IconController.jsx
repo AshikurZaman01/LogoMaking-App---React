@@ -4,11 +4,15 @@ import { useState } from "react";
 
 const IconController = () => {
 
-    const [size, setSize] = useState(0);
+    const [size, setSize] = useState(120);
+    const [rotate, setRotate] = useState(30);
 
     const handleSize = (e) => {
         setSize(e.target.value);
-        console.log(size);
+    }
+
+    const handleRotate = (e) => {
+        setRotate(e.target.value);
     }
 
     return (
@@ -21,13 +25,20 @@ const IconController = () => {
                 </div>
             </div>
 
-            <div>
-                <label className="text-xl font-bold">Size</label>
+            <div className="my-4">
+                <label className="text-xl font-bold">Size <span className="flex justify-end items-center text-xs font-extrabold">{size} px</span></label>
 
                 <div id="mouse" className="p-3 cursor-pointer bg-gray-200  rounded-md  h-[50px] flex items-center my-1 ">
-                    <input onChange={handleSize} value={size} type="range" min={0} max={10} className="w-[80%]" />
+                    <input onChange={handleSize} value={size} type="range" min={0} max={512} className="w-[80%]" />
                 </div>
+            </div>
 
+            <div className="my-4">
+                <label className="text-xl font-bold">Rotate <span className="flex justify-end items-center text-xs font-extrabold">{rotate} *</span></label>
+
+                <div id="mouse" className="p-3 cursor-pointer bg-gray-200  rounded-md  h-[50px] flex items-center my-1 ">
+                    <input onChange={handleRotate} value={rotate} type="range" min={0} max={360} className="w-[80%]" />
+                </div>
             </div>
 
         </div>
