@@ -3,7 +3,7 @@ import IconController from "../MainSection/InconController/IconController";
 
 const Home = ({ selectedIndexValue }) => {
 
-    
+
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-6">

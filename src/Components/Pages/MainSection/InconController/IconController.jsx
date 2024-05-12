@@ -7,6 +7,7 @@ const IconController = () => {
 
     const [size, setSize] = useState(120);
     const [rotate, setRotate] = useState(30);
+    const [color, setColor] = useState("#fff");
 
     const handleSize = (e) => {
         setSize(e.target.value);
@@ -16,6 +17,7 @@ const IconController = () => {
         setRotate(e.target.value);
     }
 
+    console.log(color)
     return (
         <div>
 
@@ -46,7 +48,7 @@ const IconController = () => {
                 <label className="text-xl font-bold">Colop Picker</label>
 
                 <div className="">
-                    <ColorPickerController />
+                    <ColorPickerController selectedColor={(color) => setColor(color)} />
                 </div>
             </div>
 
