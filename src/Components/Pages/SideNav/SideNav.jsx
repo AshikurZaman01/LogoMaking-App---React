@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { PencilRuler, Image, ShieldPlus } from "lucide-react";
+
 
 const SideNav = ({ selectedIndex }) => {
     const menuList = [
@@ -9,6 +10,7 @@ const SideNav = ({ selectedIndex }) => {
     ];
 
     const [activeIndex, setActiveIndex] = useState(0);
+
 
     return (
         <div className="border h-[100vh]">
