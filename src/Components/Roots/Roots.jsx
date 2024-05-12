@@ -10,7 +10,7 @@ const Roots = () => {
             <div className='flex mx-auto '>
 
                 <div className='w-64'>
-                    <SideNav></SideNav>
+                    <SideNav selectedIndex={(value) => console.log(value)}></SideNav>
                 </div>
 
                 <div className='flex-1'>
