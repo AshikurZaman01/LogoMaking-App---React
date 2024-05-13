@@ -1,12 +1,12 @@
 import { Mouse } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ColorPickerController from "../ColorPickerController/ColorPickerController";
 
 
 const IconController = () => {
 
     const [size, setSize] = useState(120);
-    const [rotate, setRotate] = useState(30);
+    const [rotate, setRotate] = useState(0);
     const [color, setColor] = useState("#fff");
 
     const handleSize = (e) => {
@@ -17,7 +17,21 @@ const IconController = () => {
         setRotate(e.target.value);
     }
 
-    console.log(color)
+    const storage = JSON.parse(localStorage.getItem("iconStorage"));
+
+    useEffect(() => {
+
+        const updateStorage = {
+            ...storage,
+            iconSize: size,
+            iconRotate: rotate,
+            iconColor: color,
+        }
+
+        localStorage.setItem("iconStorage", JSON.stringify(updateStorage));
+
+    }, [color, rotate, size, storage])
+
     return (
         <div>
 
@@ -48,7 +62,7 @@ const IconController = () => {
                 <label className="text-xl font-bold">Colop Picker</label>
 
                 <div className="">
-                    <ColorPickerController selectedColor={(color) => setColor(color)} />
+                    <ColorPickerController hideCOntroller={true} selectedColor={(color) => setColor(color)} />
                 </div>
             </div>
 
